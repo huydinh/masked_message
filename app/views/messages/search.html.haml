@@ -1,5 +1,5 @@
 
-= form_tag messages_path do
-  = label_tag :code, 'Your received code'
-  = text_field_tag :code
-  = submit_tag 'Get message'
+= form_tag messages_path, html: {class: 'form-search'} do
+  = label_tag :code, 'Your received code', class: 'control-label'
+  = text_field_tag :code, '', class: 'input-medium search-query'
+  = submit_tag 'Get message', class: 'btn-primary'

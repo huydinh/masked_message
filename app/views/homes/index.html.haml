@@ -1,16 +1,20 @@
-Welcome
+%h1 Welcome
 
-= form_for @message do |f|
-  = f.label :user_phone, 'Phone'
-  = f.text_field :user_phone
-  %br
-  = f.label :content, 'Message'
-  = f.text_field :content
-  %br
-  = f.label :code, 'Secret code'
-  = f.text_field :code
-  %br
-  = f.label :receiver_phone, 'Receiver Phone'
-  = f.text_field :receiver_phone
-  %br
-  = f.submit 'Send message'
+= form_for @message, html: {class: 'form-horizontal'} do |f|
+  .control-group
+    = f.label :user_phone, 'Phone', class: 'control-label'
+    .controls
+      = f.text_field :user_phone
+  .control-group
+    = f.label :content, 'Message', class: 'control-label'
+    .controls
+      = f.text_field :content
+  .control-group
+    = f.label :code, 'Secret code', class: 'control-label'
+    .controls
+      = f.text_field :code
+  .control-group
+    = f.label :receiver_phone, 'Receiver Phone', class: 'control-label'
+    .controls
+      = f.text_field :receiver_phone
+  = f.submit 'Send message', class: 'btn-primary'
