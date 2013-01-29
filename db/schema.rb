@@ -11,7 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130129071329) do
+ActiveRecord::Schema.define(:version => 20130129080855) do
+
+  create_table "messages", :force => true do |t|
+    t.string   "user_phone",     :null => false
+    t.integer  "user_id"
+    t.text     "content",        :null => false
+    t.string   "code",           :null => false
+    t.string   "receiver_phone", :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  add_index "messages", ["code"], :name => "index_messages_on_code", :unique => true
 
   create_table "users", :force => true do |t|
     t.datetime "created_at",                             :null => false
