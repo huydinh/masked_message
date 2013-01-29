@@ -6,6 +6,9 @@ gem 'rails', '3.2.11'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'devise'
+gem 'haml'
+
 
 
 # Gems used only for assets and not required
@@ -35,4 +38,10 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'debugger'
+group :development, :test do
+  gem 'debugger'
+end
+
+group :development do
+  gem 'sextant'
+end
