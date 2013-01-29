@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'devise'
 gem 'haml'
 
+
 gem "therubyracer"
 gem "less-rails"
 gem "twitter-bootstrap-rails"

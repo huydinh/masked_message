@@ -2,7 +2,7 @@ MaskedMessage::Application.routes.draw do
   devise_for :users
 
   resources :users
-  resources :messages, only: [:create] do
+  resources :messages, only: [:create, :new] do
     collection do
       get :search
       post :show

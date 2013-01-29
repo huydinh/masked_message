@@ -16,4 +16,8 @@ class MessagesController < ApplicationController
   def show
     @message = Message.find_by_code(params[:code])
   end
+
+  def new
+    @message = Message.new
+  end
 end

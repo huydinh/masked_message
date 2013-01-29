@@ -1,0 +1,20 @@
+.row.offset2
+  = form_for @message, html: {class: 'form-horizontal'} do |f|
+    .control-group
+      = f.label :user_phone, 'Phone', class: 'control-label'
+      .controls
+        = f.text_field :user_phone
+    .control-group
+      = f.label :content, 'Message', class: 'control-label'
+      .controls
+        = f.text_field :content
+    .control-group
+      = f.label :code, 'Secret code', class: 'control-label'
+      .controls
+        = f.text_field :code
+    .control-group
+      = f.label :receiver_phone, 'Receiver Phone', class: 'control-label'
+      .controls
+        = f.text_field :receiver_phone
+    .offset3
+      = f.submit 'Send message', class: 'btn-primary'
