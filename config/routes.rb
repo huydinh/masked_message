@@ -2,7 +2,12 @@ MaskedMessage::Application.routes.draw do
   devise_for :users
 
   resources :users
-  resources :messages, only: [:create]
+  resources :messages, only: [:create] do
+    collection do
+      get :search
+      post :show
+    end
+  end
 
   root to: 'homes#index'
 

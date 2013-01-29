@@ -9,4 +9,11 @@ class MessagesController < ApplicationController
       redirect_to root_path
     end
   end
+
+  def search
+  end
+
+  def show
+    @message = Message.find_by_code(params[:code])
+  end
 end
